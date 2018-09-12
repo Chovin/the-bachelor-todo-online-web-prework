@@ -17,5 +17,5 @@ end
 
 def get_average_age_for_season(data, season)
   contestants = data[season]
-  contestants.map {|person| person["age"].to_i}.reduce(:+) / contestants.size
+  contestants.map {|person| person["age"].to_i}.reduce(:+).to_f / contestants.size
 end
