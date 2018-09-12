@@ -1,20 +1,20 @@
 def get_first_name_of_season_winner(data, season)
   contestants = data[season]
   contestants.find {|person| person["status"] == "Winner"}["name"].split[0]
-end                                                                          # => :get_first_name_of_season_winner
+end
 
 def get_contestant_name(data, occupation)
   data.values.flatten.find {|person| person["occupation"] == occupation}["name"]
-end                                                                               # => :get_contestant_name
+end
 
 def count_contestants_by_hometown(data, hometown)
   data.values.flatten.count {|person| person["hometown"] == hometown}
-end                                                                    # => :count_contestants_by_hometown
+end
 
 def get_occupation(data, hometown)
   data.values.flatten.find {|person| person["hometown"] == hometown}["occupation"]
-end                                                                                 # => :get_occupation
+end
 
 def get_average_age_for_season(data, season)
   # code here
-end                                           # => :get_average_age_for_season
+end
